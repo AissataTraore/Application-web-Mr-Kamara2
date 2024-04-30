@@ -1,5 +1,7 @@
+@import url('mainDesign.css');
 body {
   font-family: "lato", sans-serif;
+  background-color: var(--color1) !important;
 }
 
 .myContainer {
@@ -15,6 +17,8 @@ h2 {
   font-size: 26px;
   margin: 20px 0;
   text-align: center;
+  color: #fff;
+  font-weight: 900;
 }
 
 h2 small {
@@ -23,21 +27,28 @@ h2 small {
 
 .responsive-table li {
   border-radius: 3px;
-  padding: 25px 30px;
+  padding: 10px 10px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 25px;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.responsive-table {
+    margin: 0;
+    padding: 0;
 }
 
 .responsive-table .table-header {
-  background-color: hsl(15, 66%, 49%);
-  font-size: 14px;
+  background-color: #fff;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  font-weight: 900;
 }
 
 .responsive-table .table-row {
-  background-color: #b1aaaa;
+  background-color: #e7e7e7;
   box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -79,4 +90,38 @@ h2 small {
     flex-basis: 50%;
     text-align: right;
   }
+}
+
+.input-box {
+  height: 52px;
+  margin: 18px 0;
+  width: 100%;
+}
+.input-box input {
+  height: 100%;
+  min-width: 300px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #c7bebe;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  align-items: end;
+}
+.input-box input:focus,
+.input-box input:valid {
+  border-color: #4caf50;
+}
+.input-box.button input {
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  background: #4caf50;
+  cursor: pointer;
+}
+.input-box.button input:hover {
+  background: #0e4bf1;
 }

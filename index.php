@@ -30,9 +30,7 @@
                 <ul class="navbar-nav text-uppercase ms-auto py-lg-0">
                     <li class="nav-item text-center"><a class="nav-link" href="#">Accueil</a></li>
                     <li class="nav-item text-center"><a class="nav-link" href="pages/connexion.php">Connexion</a></li>
-                    <!-- <li class="nav-item text-center"><a class="nav-link" href="">Offres</a></li> -->
-                    <li class="nav-item text-center"><a class="nav-link" href="pages/dashboardtest.php">A-propos</a></li>
-                    <!-- <li class="nav-item text-center"><a class="nav-link" href="connexion.php">Connexion</a></li> -->
+                    <li class="nav-item text-center"><a class="nav-link" href="pages/dashboard.php">Dashboard</a></li>
                 </ul>
             </div>
         </div>

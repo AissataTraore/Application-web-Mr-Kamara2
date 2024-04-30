@@ -3,53 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SVG Logo</title>
+<title>Connexion</title>
 <link rel="stylesheet" href="../style/css/connexion.css">
+<link rel="stylesheet" href="../lib/css/bootstrap/bootstrap.css">
+<link rel="stylesheet" href="../lib/css/fontawesome/css/all.css">
 </head>
+<?php 
+    if(isset($_GET["etat"])){
+      if($_GET["etat"] == 1){
+        echo "<script>alert('Ce login existe deja !');</script>";
+      }else if($_GET["etat"] == 2){
+          echo "<script>alert('Login ou mot de passe incorrect !');</script>";
+      }
+    }
+?>
 <body>
 
-    <!------------------------- NavBar ------------------------->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container-md">
-            <a class="navbar-brand" href="#page-top"><img src="res/images/Tr Hospital.png" alt="Logo" /><span>Tr Hospital</span></a>
-            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars ms-1"></i>
-            </button><div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ms-auto py-lg-0">
-                    <li class="nav-item text-center"><a class="nav-link" href="#">Accueil</a></li>
-                    <li class="nav-item text-center"><a class="nav-link" href="pages/services.php">Services</a></li>
-                    <!-- <li class="nav-item text-center"><a class="nav-link" href="">Offres</a></li> -->
-                    <li class="nav-item text-center"><a class="nav-link" href="pages/about.php">A-propos</a></li>
-                    <!-- <li class="nav-item text-center"><a class="nav-link" href="connexion.php">Connexion</a></li> -->
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-------------------------Navbar-------------------------------->
+    <?php include("../include/header.php") ?>
+    <!-------------------------Navbar-------------------------------->   
 
 <div class="screen-1">
-    
-        <img src="../res/images/Tr Hospital.png" class="logo">
-    
-
-    <div class="email">
-        <label for="email">Email Address</label>
-        <div class="sec-2">
-            <ion-icon name="mail-outline"></ion-icon>
-            <input type="email" name="email" id="email" placeholder="Username@gmail.com">
+    <img src="../res/images/Tr Hospital.png" class="logo">
+    <form action="traitement/_connexion.php" method="POST">
+        <div class="email">
+            <label for="email">Email Address</label>
+            <div class="sec-2">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="email" name="login" id="email" placeholder="Username@gmail.com">
+            </div>
         </div>
-    </div>
-
-    <div class="password">
-        <label for="password">Mot de passe</label>
-        <div class="sec-2">
-            <ion-icon name="lock-closed-outline"></ion-icon>
-            <input type="password" name="password" id="password" placeholder="············">
-            <ion-icon class="show-hide" name="eye-outline"></ion-icon>
+        <div class="password">
+            <label for="password">Mot de passe</label>
+            <div class="sec-2">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" name="mdp" id="password" placeholder="············">
+                <ion-icon class="show-hide" name="eye-outline"></ion-icon>
+            </div>
         </div>
-    </div>
-
-    <button class="login">Login</button>
+    
+        <button class="login">Login</button>
+    </form>
 
     <div class="footer">
         <span>Sign up</span>
@@ -58,5 +52,5 @@
 </div>
 
 </body>
-<script src=""></script>
+<script src="../style/js/navbar.js"></script>
 </html>
